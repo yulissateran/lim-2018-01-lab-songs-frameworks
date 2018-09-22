@@ -1,14 +1,12 @@
-# Ranking songs con un framework
+# Lab songs con un framework
 
 ## Objetivo
 
-Programar un to-do list que permita crear tareas, darlas por completadas y 
-Programar un  list que permita crear tareas, darlas por completadas y 
-eliminarlas.
+Programar un ranking de canciones por artista elegido.
 
-**Demo:**
+**Demo:** 
 
-
+![labsongs](https://user-images.githubusercontent.com/25906896/45911146-6978ac80-bdd5-11e8-9927-fe2e98717bae.gif)
 
 ## Consideraciones generales
 
@@ -53,17 +51,22 @@ Para comenzar tendrás que hacer un _fork_ y _clonar_ este repositorio.
 
 * [ ] El `README.md` debe contener un resumen de lo que encontraremos en tu 
 proyecto.
+* [ ] Utilizarás la API de [last.fam](https://www.last.fm/api), solo debes 
+registrarte y crear un key, es simple! (Recuerda que al colocar la URL 
+debes usar `https` en lugar de `http`).
 
 #### Funcionalidades
 
 * [ ] Permite cambiar de artista.
-* [ ] Al cambiar de artista deberá mostrar la imagen y la lista de canciones 
-del mismo./elegido
+* [ ] Al cambiar de artista deberá mostrar la imagen, nombre y lista de 
+canciones de la opción seleccionada.
+* [ ] Deberás crear la propiedad de votos para las canciones e inicializar 
+los votos en cero (0).
 * [ ] Debe tener un botón que permita sumar votos a las canciones.
 * [ ] Debe tener otro botón que permita restar los votos hasta el tope de 
 cero 0 (No debería contar en negativo).
 * [ ] Las canciones se deben ordenar por cantidad de votos de forma 
-descendente (de mayor a menor votos)./ más menos
+descendente (de mayor a menor).
 * [ ] Debe contener como mínimo la información de 5 artistas y mínimo 10 
 canciones por cada uno.
 * [ ] Deberá contener mínimo 3 componentes.
@@ -74,7 +77,8 @@ canciones por cada uno.
 
 ### Hacker Edition
 
-* [ ] Ordenar de forma ascendente las canciones del artista.
+* [ ] Agregar un botón que permita reordenar de forma ascendente las 
+canciones del artista (menor a mayor).
+* [ ] Reemplazar los votos inicializados en cero (0) por la cantidad de 
+reproducciones (información en la API).
 * [ ] Buscador de artistas.
-
-
