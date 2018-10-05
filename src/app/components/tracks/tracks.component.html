@@ -1,0 +1,14 @@
+     <li class="list-group-item" >
+          <div class="d-md-flex bd-highlight">
+            <div class="mr-auto  bd-highlight col-md-6">
+              <span>{{track['name']}}</span>
+            </div>
+            <div class="bd-highlight m-1">
+              <div class="d-flex justify-content-around">
+                <button type="button" class="btn  m-1 text-success bg-white" id="track.id" (click)="liked(track.id)"><i class="fas fa-heart"></i></button>
+                <button type="button" class="btn  m-1 text-danger bg-white" id="track.id" (click)="notLiked(track.id)"><i class="fas fa-thumbs-down"></i></button>
+                <button type="button" class="btn m-1 bg-white">{{track.likes}}</button>
+              </div>
+            </div>
+          </div>
+        </li>

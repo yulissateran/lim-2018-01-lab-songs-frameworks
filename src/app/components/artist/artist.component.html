@@ -1,0 +1,23 @@
+<div class="row justify-content-center">
+  <div class="card col-10" style="">
+    <div class="row justify-content-center">
+        <img class="col-8 mt-3" src="{{img}}" alt="Card image cap" height="160px">
+    </div>
+    <div class="row d-flex justify-content-center m-2">
+        <button class="col-3 btn bg-secondary m-2"(click)="nextArtist()"><i class="fas fa-chevron-circle-left"></i></button>
+        <button class="col-3 btn bg-secondary m-2" (click)="previewArtist()"><i class="fas fa-chevron-circle-right"></i></button>
+      </div>
+    <div class="card-body">
+      <h6 class="card-title text-center">{{name}}</h6>
+      <div>
+          <ul class="list-group">
+              <app-tracks  (like)="like($event)"
+              (notLike)="notLike($event)" [track]="track" *ngFor="let track of rankingTracks" ></app-tracks>
+            </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
