@@ -93,7 +93,7 @@ export class ArtistComponent implements OnInit {
         const query = `${item.artist.name} ${item.name}`;
          this.lastFm.getVideo(query).subscribe(data=> {
            const idVideo = data['items'][0]['id']['videoId'];
-        item.urlVideo = `https://www.youtube.com/embed/${idVideo}?enablejsapi=1&origin=http://localhost:4200/`;
+        item.urlVideo = `https://www.youtube.com/embed/${idVideo}?enablejsapi=1&origin=https://yulissateran.github.io/`;
          });
         item.id = index;
         item.likes = 0;
