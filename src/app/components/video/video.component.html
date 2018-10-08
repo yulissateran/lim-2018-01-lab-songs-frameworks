@@ -1,7 +1,5 @@
-<div >
-    <p>{{track['name']}}</p>
-    <iframe  *ngIf="track['urlVideo']" id="player" type="text/html"
-     width="180" height="120" [src]="track.urlVideo? track.urlVideo: ''" frameborder="0">
-    </iframe> 
+<div>
+    <iframe id="player" type="text/html"
+     width="300" height="200"  [src]=getSantizeUrl(track.urlVideo)  frameborder="0"></iframe>
 </div>
  

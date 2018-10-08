@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
+import { DomSanitizer } from "@angular/platform-browser";
+
 import { LastFmService} from '../../services/last-fm.service';
 @Component({
   selector: 'app-video',
@@ -7,21 +9,27 @@ import { LastFmService} from '../../services/last-fm.service';
 })
 export class VideoComponent implements OnInit {
   @Input() track : any;
-  @Input() urlCurrentVideo: string
-  @Input() idTrackPlay: number;
-  @Input() trackId: number;
   public url : string;
   
 
-  constructor() {
-    
-    // this.url = this.track.urlVideo;
-    // console.log(this.url)
-   }
+  constructor(
+    private sanitizer: DomSanitizer,
+    private lastFm :LastFmService
+  ) {
+    // this.getUrl()
 
+   }
+  
+  
+public getSantizeUrl(url : string) {
+  return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+}
+
+   getUrl(){
+    console.log(this.track.urlVideo)
+   }
   ngOnInit() {
-    // this.url = this.track.urlVideo;
-    // console.log(this.url)
+
   }
 
 }

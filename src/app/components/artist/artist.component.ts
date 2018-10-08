@@ -47,11 +47,21 @@ export class ArtistComponent implements OnInit {
     this.lastFm.getDataAPI(nameArtist, 'gettoptracks').subscribe((data) => {
       this.toptracks = data.body['toptracks'].track;
       const Trackcs = this.toptracks.slice(0, 11)
+
+
       this.rankingTracks = Trackcs.map((item, index) => {
+        const query = `${item.artist.name} ${item.name}`;
+         this.lastFm.getVideo(query).subscribe(data=> {
+          const idVideo = data['items'][0]['id']['videoId'];
+          item.urlVideo = `https://www.youtube.com/embed/${idVideo}?enablejsapi=1&origin=http://localhost:4200/`;
+         });
         item.id = index;
         item.likes = 0;
         return item;
-      })
+      });
+      console.log(this.rankingTracks)
+
+
     });
   }
   nextArtist() {
@@ -80,10 +90,16 @@ export class ArtistComponent implements OnInit {
       this.toptracks = data.body['toptracks'].track;
       const Trackcs = this.toptracks.slice(0, 11);
       this.rankingTracks = Trackcs.map((item, index) => {
+        const query = `${item.artist.name} ${item.name}`;
+         this.lastFm.getVideo(query).subscribe(data=> {
+           const idVideo = data['items'][0]['id']['videoId'];
+        item.urlVideo = `https://www.youtube.com/embed/${idVideo}?enablejsapi=1&origin=http://localhost:4200/`;
+         });
         item.id = index;
         item.likes = 0;
         return item;
       });
+      console.log(this.rankingTracks)
     })
     this.lastFm.getDataAPI(artist, 'getinfo').subscribe((data) => {
       this.img = data.body['artist']['image'][4]['#text'] || 'https://www.elnuevosiglo.com.co/sites/default/files/styles/noticia_interna/public/2018-03/03bjf1-marzo29.jpg?itok=ziqQIuVG';
@@ -92,22 +108,22 @@ export class ArtistComponent implements OnInit {
   }
 
   playTrack(event) {
-  console.log(event.currentTarget.title , event.currentTarget.id);
-  const query = `${event.currentTarget.title} ${event.currentTarget.id}`;
-  this.idTrackPlay = event.currentTarget.name;
-  this.lastFm.getVideo(query).subscribe(data=> {
-    const idVideo = data['items'][0]['id']['videoId'];
-   return  this.rankingTracks= this.rankingTracks.map(elem =>{
-      if(elem.id === parseInt(this.idTrackPlay)) {
-        elem.play = true;
-        elem.urlVideo =`http://www.youtube.com/embed/${idVideo}?enablejsapi=1&origin=http://localhost:4200/`;
-      }
-      return elem;
-    });
-    console.log(this.rankingTracks, this.idTrackPlay)
-    console.log(data)
-    // this.idCurrentVideo = data['items'][0]['id']['videoId'];
-    console.log(this.idCurrentVideo, this.idTrackPlay );
-  })
+  // console.log(event.currentTarget.title , event.currentTarget.id);
+  // const query = `${event.currentTarget.title} ${event.currentTarget.id}`;
+  // this.idTrackPlay = event.currentTarget.name;
+  // this.lastFm.getVideo(query).subscribe(data=> {
+  //   const idVideo = data['items'][0]['id']['videoId'];
+  //  return  this.rankingTracks= this.rankingTracks.map(elem =>{
+  //     if(elem.id === parseInt(this.idTrackPlay)) {
+  //       elem.play = true;
+  //       elem.urlVideo =`http://www.youtube.com/embed/${idVideo}?enablejsapi=1&origin=http://localhost:4200/`;
+  //     }
+  //     return elem;
+  //   });
+  //   console.log(this.rankingTracks, this.idTrackPlay)
+  //   console.log(data)
+  //   // this.idCurrentVideo = data['items'][0]['id']['videoId'];
+  //   console.log(this.idCurrentVideo, this.idTrackPlay );
+  // })
   }
 }
