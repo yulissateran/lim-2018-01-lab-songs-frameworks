@@ -7,9 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class SearchArtistComponent implements OnInit {
   @Output() private  search : EventEmitter<any> = new EventEmitter();
-  private artistSearch: string;
+  public artistSearch: string;
   constructor() { }
-  // public artistName: string;
+  
   searchArtist() {
     this.search.emit(this.artistSearch);
   }

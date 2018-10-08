@@ -6,7 +6,7 @@
       <img class="col-8 col-md-4 col-lg-5 m-1" src="{{img}}" alt="Artist image" height="160px">
       <button class="d-none d-md-block col-md-1 btn bg-transparent m-2 icons-size" (click)="previewArtist()"><i class="fas fa-chevron-circle-right"></i></button>
     </div>
-    <h6 class="card-title text-center">{{name}}</h6>
+    <h3 class="card-title text-center">{{name}}</h3>
     <div class="row">
       <button class="d-block d-md-none col-6 btn bg-transparent  icons-size" (click)="nextArtist()"><i class="fas fa-chevron-circle-left"></i></button>
       <button class="d-block d-md-none col-6 btn bg-transparent icons-size" (click)="previewArtist()"><i class="fas fa-chevron-circle-right"></i></button>
@@ -15,7 +15,6 @@
     <div class="card-body">           
       <div>
         <ul class="list-group">
-           <!-- <app-video ></app-video> -->
           <app-tracks (like)="like($event)" (notLike)="notLike($event)" (playVideo)="playTrack($event)" 
           [track]="track" 
            *ngFor="let track of rankingTracks"></app-tracks>

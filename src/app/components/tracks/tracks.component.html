@@ -1,12 +1,14 @@
 <li class="list-group-item">
   <div class="d-md-flex bd-highlight">
     <div class="mr-auto  bd-highlight col-lg-6">
-      <span class="card-title text-center">{{track['name']}}</span>
-      <app-video  [track]="track" ></app-video>
+      <h5 class="card-title text-center">{{track['name']}}</h5>
+      <!-- <div class="row"> -->
+          <app-video class="row" [track]="track" ></app-video>
+      <!-- </div>  -->
     </div>    
-    <div class="bd-highlight m-1 col-lg-6">
-      <div class="d-flex justify-content-around">
-        <button type="button" class="btn  m-1 text-secondary bg-white" id="{{track['name']}}" title="{{track['artist'].name}}" name="{{track.id}}" (click)="playTrack($event)"><i class="fas fa-play"></i></button>
+    <div class="bd-highlight m-1 col-lg-6 d-flex align-items-center">
+      <div class="col-12 d-flex justify-content-around">
+        <!-- <button type="button" class="btn  m-1 text-secondary bg-white" id="{{track['name']}}" title="{{track['artist'].name}}" name="{{track.id}}" (click)="playTrack($event)"><i class="fas fa-play"></i></button> -->
         <button type="button" class="btn  m-1 text-success bg-white" (click)="liked(track.id)"><i class="fas fa-heart"></i></button>
         <button type="button" class="btn  m-1 text-danger bg-white" (click)="notLiked(track.id)"><i class="fas fa-thumbs-down"></i></button>
         <button type="button" class="btn m-1 bg-white">{{track.likes}}</button>
