@@ -12,15 +12,14 @@ export class LastFmService {
     private HTTP: HttpClient,
    
   ) { }
-  private artistUrl = 'api/artists'
-  getTracksAPI(nameArtist) {
-    const UrlTracks = `https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${nameArtist}&api_key=ffc3e086ff0216f42bf64c29b2d6db65&format=json`;
-    return this.HTTP.get(UrlTracks , { observe: 'response' });
+  getDataAPI(nameArtist, typeRequest) {
+    const Url= `https://ws.audioscrobbler.com/2.0/?method=artist.${typeRequest}&artist=${nameArtist}&autocorrect=1&api_key=ffc3e086ff0216f42bf64c29b2d6db65&format=json`;
+    return this.HTTP.get(Url, { observe: 'response' });
   }
+ 
+  getVideo(query){
+    return this.HTTP.get(`https://www.googleapis.com/youtube/v3/search?q=${query}&key=AIzaSyDakMcm-JaTerQmzKCwIg142mwboT7NlK4&part=snippet`)
+  }
+   
 
-  getArtistAPI (nameArtist) {
-    const urlArtist = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${nameArtist}&api_key=ffc3e086ff0216f42bf64c29b2d6db65&format=json`;
-    console.log(urlArtist)
-    return this.HTTP.get(urlArtist, { observe: 'response' });
-  }
 }

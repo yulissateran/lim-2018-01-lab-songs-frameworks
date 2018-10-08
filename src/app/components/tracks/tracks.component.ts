@@ -6,14 +6,24 @@ import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
   styleUrls: ['./tracks.component.css']
 })
 export class TracksComponent implements OnInit {
+  @Input() idCurrentVideo: string;
   @Input() track: any;
-  @Output() public like : EventEmitter<any> = new EventEmitter();
-  @Output() public notLike = new EventEmitter<void>();
- 
-  constructor() { 
+  @Input() idTrackPlay: number;
+  @Output() public like: EventEmitter<any> = new EventEmitter<void>();
+  @Output() public notLike: EventEmitter<any> = new EventEmitter<void>();
+  @Output() public playVideo: EventEmitter<any> = new EventEmitter<void>();
+  public Track :any;
+  constructor() {
+    console.log(this.track)
   }
   ngOnInit() {
+    console.log(this.track)
+
   }
+  playTrack(event) {  
+    this.playVideo.emit(event);
+  }
+
   liked(id) {
     console.log(id);
     this.like.emit(id);
