@@ -1,84 +1,24 @@
-# Lab songs con un framework
+# Yout music
 
-## Objetivo
-
-Programar un ranking de canciones por artista elegido.
+Es un ranking de canciones por artista elegido.
 
 **Demo:** 
-
-![labsongs](https://user-images.githubusercontent.com/25906896/45911146-6978ac80-bdd5-11e8-9927-fe2e98717bae.gif)
-
-## Consideraciones generales
-
-Este proyecto se debe "resolver" de forma individual.
-
-Se deberá desarrollar con una de estas tres herramientas: Angular, 
-React o Vue; previamente elegida por ti.
-
-Se puede replicar el diseño propuesto o crear su propio estilo.
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este repositorio.
-
-## Recursos
-
-### React
-
-* [React - docs oficiales](https://reactjs.org/)
-* [React - tutorial](https://egghead.io/courses/the-beginner-s-guide-to-react)
-* [create-react-app](https://github.com/facebook/create-react-app)
-* [React js en español - tutorial básico, primeros pasos y ejemplos - frontendlabs.io](https://frontendlabs.io/3158--react-js-espanol-tutorial-basico-primeros-pasos-ejemplos)
-
-### Angular
-
-* [Angular - docs oficiales](https://angular.io/)
-* [Angular CLI](https://cli.angular.io/)
-* [Angular - tutorial](https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ)
-* [Angular - crud](https://www.youtube.com/watch?v=6wVolJfXn1c)
-
-### Vue
-
-* [Vue - docs oficiales](https://vuejs.org/)
-* [Vue CLI](https://cli.vuejs.org/)
-* [Vue- adicional](https://scotch.io/search?q=vue)
-* [Vue- school](https://vueschool.io/)
-
-
-## Checklist
-
-### Parte obligatoria
-
-#### General
-
-* [ ] El `README.md` debe contener un resumen de lo que encontraremos en tu 
-proyecto.
-* [ ] Utilizarás la API de [last.fam](https://www.last.fm/api), solo debes 
-registrarte y crear un key, es simple! (Recuerda que al colocar la URL 
-debes usar `https` en lugar de `http`).
+![labsongs](https://scontent.flim6-1.fna.fbcdn.net/v/t1.15752-9/43534404_537836219994266_4819841879010967552_n.png?_nc_cat=106&_nc_eui2=AeFXuMowyP_lNj6awiqzH1MevleTteSFNV8AkeVfqzxUvoBO_JdGS4YtELBhMsdzwAJSjmvI9MmX9V2EVEba5VvBCzBuq-w05wkpSvRw0zmFVg&oh=e3e8842d033f9407084af10144337e60&oe=5C520C4B)
+![labsongs](https://scontent.flim6-1.fna.fbcdn.net/v/t1.15752-9/43460571_615658198851858_3329895364428824576_n.png?_nc_cat=107&_nc_eui2=AeFJ5IVqxDqvdWSD0C8li4xPisJeUJjdgJvAXShhJjpRQL1ypAX04Vincqyw0pQGo0VdcO820Rlzz_K7SVGZbWlqoXFWxF-gv-Wj4DzSsqZfWA&oh=69d42e07d0c92981c430d5971c77ab83&oe=5C18D9D3)
 
 #### Funcionalidades
 
 * [ ] Permite cambiar de artista.
-* [ ] Al cambiar de artista deberá mostrar la imagen, nombre y lista de 
+* [ ] Al cambiar de artista  muestra la imagen, nombre y lista de 
 canciones de la opción seleccionada.
-* [ ] Deberás crear la propiedad de votos para las canciones e inicializar 
-los votos en cero (0).
-* [ ] Debe tener un botón que permita sumar votos a las canciones.
-* [ ] Debe tener otro botón que permita restar los votos hasta el tope de 
-cero 0 (No debería contar en negativo).
-* [ ] Las canciones se deben ordenar por cantidad de votos de forma 
+* [ ] Tiene un botón que permite sumar y restar votos a las canciones  hasta el tope de cero 0 (No cuenta en negativo).
+* [ ] Las canciones se  ordenan por cantidad de votos de forma 
 descendente (de mayor a menor).
-* [ ] Debe contener como mínimo la información de 5 artistas y mínimo 10 
-canciones por cada uno.
-* [ ] Deberá contener mínimo 3 componentes.
+* [ ] Permite buscar cualquier artista.
+* [ ] Permite reproducir cada cancion del artista seleccionado.
 
-#### Desplegado
+## Herramientas empleadas
 
-* [ ] Deberá ser desplegado en gh-pages, Heroku, etc.
+* [ ]  API de [last.fam](https://www.last.fm/api).
+* [ ]   Youtube [Data API](https://developers.google.com/youtube/v3/) y [Player API](https://developers.google.com/youtube/iframe_api_reference)
 
-### Hacker Edition
-
-* [ ] Agregar un botón que permita reordenar de forma ascendente las 
-canciones del artista (menor a mayor).
-* [ ] Reemplazar los votos inicializados en cero (0) por la cantidad de 
-reproducciones (información en la API).
-* [ ] Buscador de artistas.
