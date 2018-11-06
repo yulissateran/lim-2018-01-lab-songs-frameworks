@@ -1,8 +1,6 @@
-.icons-size {
-  font-size: 3rem;
-}
+
 #img-artist {
-  height: 250px;
+  height: 150px;
 }
 @media only screen and (max-width: 320px) {
   #img-artist {

@@ -2,3 +2,16 @@
 .bg-main {
   background-color: #D5DEE1;
 }
+
+.card {
+  border: none !important;
+}
+.bg-main {
+  background-color: #3A1833 !important;
+}
+.icons-size {
+  font-size: 2rem;
+}
+.icons-mini-size {
+  font-size: 1.5rem;
+}
