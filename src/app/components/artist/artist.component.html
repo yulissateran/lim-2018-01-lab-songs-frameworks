@@ -1,18 +1,38 @@
 <div class="row justify-content-center">
   <div class="  col-12 col-sm-6 px-1">
       <div class="container">
-        <h2 class="text-center text-white py-2">Yout Music</h2>
-    <div class="row justify-content-center">
-      <button class="d-none d-md-block col-md-1 btn text-white bg-transparent m-2 icons-size" (click)="nextArtist()"><i class="fas fa-chevron-circle-left"></i></button>
+          <h6 class="text-center text-white py-2">Yout Music</h6>
+          <app-search-artist (search)="searchArtist($event)"></app-search-artist> 
+       
+    <div class="row justify-content-center align-items-center">
+      <button class=" rounded-button border
+         rounded-circle d-none d-md-block   btn mr-3 
+       " (click)="nextArtist()">
+      <i class="fas fa-fast-backward"></i>
+    </button>
+
       <img class="col-8 col-md-4  m-1 rounded" src="{{img}}" alt="Artist image" id="img-artist" >
-      <button class="d-none d-md-block col-md-1 btn text-white bg-transparent m-2 icons-size" (click)="previewArtist()"><i class="fas fa-chevron-circle-right"></i></button>
+      <button class="
+      rounded-button
+      border
+      rounded-circle d-none d-md-block 
+      btn  " (click)="previewArtist()"><i class="fas fa-fast-forward"></i></button>
     </div>
     <h3 class="card-title text-center text-white m-0 p-0 mt-2">{{name}}</h3>
+    
     <div class="row d-flex justify-content-center mt-3">
-      <button class="d-block border border-secondary rounded-circle d-md-none col-3 btn mr-3 bg-white icons-size" (click)="nextArtist()"><i class="fas fa-fast-backward"></i></button>
-      <button class="d-block border border-secondary rounded-circle d-md-none col-3 btn bg-white icons-size" (click)="previewArtist()"><i class="fas fa-fast-forward"></i></button>
+      <button class=" rounded-button border
+      rounded-circle d-md-none  btn mr-3 
+       " (click)="nextArtist()">
+      <i class="fas fa-fast-backward"></i>
+    </button>
+      <button class="
+      rounded-button
+      border
+      rounded-circle d-md-none 
+      btn  " (click)="previewArtist()"><i class="fas fa-fast-forward"></i></button>
     </div>
-     <app-search-artist (search)="searchArtist($event)"></app-search-artist> 
+     
     <div class="card-body p-0 ">           
       <div>
         <ul class="list-group ">

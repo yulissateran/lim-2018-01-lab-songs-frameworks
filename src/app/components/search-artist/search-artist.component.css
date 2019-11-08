@@ -1,3 +1,18 @@
 .c-pointer {
   cursor: pointer;
 }
+
+form {
+  display: flex;
+  flex-wrap: nowrap;
+}
+input {
+  border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+flex-shrink: 5;
+}
+button {
+  border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+max-width: 3rem;
+}

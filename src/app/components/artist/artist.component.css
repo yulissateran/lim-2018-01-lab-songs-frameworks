@@ -2,6 +2,16 @@
 #img-artist {
   height: 150px;
 }
+.rounded-button {
+  height: 4rem;
+  width: 4rem;
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+.rounded-button:hover {
+  background-color: rgba(0,0,0,.5);
+}
 @media only screen and (max-width: 320px) {
   #img-artist {
       height: 150px;
